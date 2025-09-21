@@ -2,25 +2,18 @@
 
 Modern, highly-responsive job search UI built with React + Tailwind CSS, featuring an animated navbar, rich search with dropdown filters, fixed job datasets per section, Redux Toolkit state persistence, animated apply modal, and toast interactions. Designed for production and Vercel-ready.
 
-### Preview
+### Responsive Laptop Preview
 
-Add your screenshots or short GIFs here. Example (place files in `docs/` or `public/`):
+<img width="2880" height="3178" alt="talentvare-frontend vercel app_" src="https://github.com/user-attachments/assets/c76b2974-1bbe-4588-8b30-e2878b493429" />
 
-```md
-![Navbar](docs/preview-navbar.png)
-![Find Jobs](docs/preview-find-jobs.png)
-![Apply Modal](docs/preview-apply-modal.gif)
-```
+<img width="916" height="353" alt="image" src="https://github.com/user-attachments/assets/150e04ec-76c9-4d36-a4ce-8f77efa04f04" />
 
-Optionally embed a Loom or video link:
 
-```md
-[Product Walkthrough](https://your-video-link)
-```
+( **Note**: You can see the mobile, tablet and desktop version UI in the end of the README.md file )
 
 ### Live Demo
 
-Add your deployed URL (Vercel): `https://your-app.vercel.app`
+( TalentVare Frontend Vercel Live Link ) :  [https://talentvare-frontend.vercel.app](https://talentvare-frontend.vercel.app)
 
 ## Tech Stack
 
@@ -51,6 +44,9 @@ Third‑party services/libraries used in UX:
   - Left `ProfileCard` with banner image and DiceBear avatar
   - Right content: search bar, chips, and three jobs sections
 - **Search Bar with Modern Dropdowns**
+
+  
+  - <img width="615" height="298" alt="image" src="https://github.com/user-attachments/assets/f81cd969-933a-4960-b00f-76b66a93cd49" />
   - Select Location and Job Type menus with smooth open/close, outside-click dismissal
   - Right-edge aligned menus with visible rings; hover interactions; scrollable lists
   - Narrower input + wider Search button for emphasis
@@ -59,6 +55,9 @@ Third‑party services/libraries used in UX:
   - Three explicit arrays: `FEATURED_JOBS`, `RECOMMENDED_JOBS`, `LATEST_JOBS` (different orders, no randomness)
   - Unique Redux keys per section: `sectionKey-jobId` ensures isolation across sections
 - **Job Cards**
+
+
+  - <img width="615" height="161" alt="image" src="https://github.com/user-attachments/assets/b6f32109-5868-4020-9842-8c792f52cea9" />
   - Deterministic avatars via DiceBear seed per job
   - Bookmark toggle with `react-icons` bookmark states and toast notifications
   - Apply flow: modal with animated check; button becomes “Applied ✓” and disables
@@ -66,6 +65,9 @@ Third‑party services/libraries used in UX:
   - Redux slice for `saved` and `applied`
   - LocalStorage subscription for persistence across sessions
 - **Animations**
+
+
+  - <img width="903" height="409" alt="image" src="https://github.com/user-attachments/assets/4c41f3fb-321e-44a6-bee3-7ed9eedba28f" />
   - Modal open/close pop, stroke-draw tick, subtle glows
   - Mobile sheet slide, hover/active transitions
 
@@ -160,12 +162,18 @@ Optional optimizations:
 - Keep components focused and reusable; prefer prop-driven configuration
 - Avoid introducing randomness into fixed datasets
 
-## License
-
-MIT © TalentVare
-
 ## Acknowledgments
 
 - DiceBear for avatars
 - React Toastify for slick toasts
 - Tailwind CSS for fast, utility-first styling
+
+## Other Screens ( Mobile, Tablet ) :
+
+### Tablet Screen :
+<img alt="localhost_3000_" src="https://github.com/user-attachments/assets/2b5fd674-e3ad-49c1-acc3-71609b77514e" />
+
+
+### Mobile Screen :
+<img alt="localhost_3000_ (1)" src="https://github.com/user-attachments/assets/f44301e3-d661-43a1-b25d-04b4e22ddadf" />
+
