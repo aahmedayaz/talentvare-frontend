@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-mobile-sm: 320px;   /* small/compact phones */
+  --breakpoint-mobile: 375px;      /* most common phone width */
+  --breakpoint-mobile-lg: 414px;   /* large/common iPhones */
+  --breakpoint-phablet: 428px;     /* large phones */
+  --breakpoint-phablet-lg: 480px;  /* very large phones */
+
+  --breakpoint-tablet-sm: 600px;   /* small tablets */
+  --breakpoint-tablet: 768px;      /* tablet portrait */
+  --breakpoint-tablet-md: 834px;   /* iPad Air/Pro portrait */
+  --breakpoint-tablet-lg: 1024px;  /* tablet landscape */
+
+  --breakpoint-laptop-sm: 1280px;  /* small laptops */
+  --breakpoint-laptop: 1366px;     /* very common Windows laptop */
+  --breakpoint-laptop-lg: 1440px;  /* large laptops */
+  --breakpoint-laptop-xl: 1536px;  /* high‑res laptops */
+}
+
+/* Font token for requested typography (fallbacks provided) */
+@theme {
+  --font-neue: "Neue Haas Grotesk Display Pro", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Optional: add your actual font files later and swap the src URLs */
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: local("Arial");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Small utility animations */
+@utility animate-slide-down {
+  animation: slide-down .25s ease-out both;
+}
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
