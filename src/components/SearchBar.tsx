@@ -32,9 +32,9 @@ const SearchBar: React.FC = () => {
 
   return (
     <div className="mt-4 rounded-2xl ring-1 ring-slate-300 bg-white p-2">
-      <div className="flex items-stretch gap-4">
+      <div className="flex items-stretch gap-2 tablet:gap-4">
         {/* Search input - slightly less wide */}
-        <div className="flex-[1.1] min-w-[180px] rounded-xl bg-slate-50 px-4 py-4">
+        <div className="flex-1 rounded-xl bg-slate-50 px-3 py-3 tablet:px-4 tablet:py-4">
           <input
             type="text"
             value={query}
@@ -93,7 +93,7 @@ const SearchBar: React.FC = () => {
         </div>
 
         {/* Wider Search button */}
-        <button className="inline-flex items-center justify-center h-12 rounded-xl bg-[#0154AA] px-7 laptop:px-8 text-white font-medium shrink-0 min-w-[160px] laptop:min-w-[200px] cursor-pointer">
+        <button className="inline-flex items-center justify-center h-12 rounded-xl bg-[#0154AA] px-5 tablet:px-7 laptop:px-8 text-white font-medium shrink-0 min-w-[120px] tablet:min-w-[160px] laptop:min-w-[200px] cursor-pointer">
           <span className="relative mr-2 h-4 w-4"><SearchIcon /></span>
           Search
         </button>
