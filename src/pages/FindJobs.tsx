@@ -17,7 +17,7 @@ const FindJobs: React.FC = () => {
     // will show correct toast based on subsequent state; leave minimal noise
   }
   return (
-    <div className="mx-auto w-full max-w-[1440px] px-3 tablet:px-6 tablet-lg:px-[50px]">
+    <div className="mx-auto w-full max-w-[1440px] px-5 tablet:px-6 tablet-lg:px-[50px]">
       <div className="py-8 laptop-sm:py-10">
         <div className="flex flex-col laptop-sm:flex-row gap-6">
           {/* Left profile (fixed size on laptops) */}
@@ -35,13 +35,18 @@ const FindJobs: React.FC = () => {
             <SearchBar />
 
             {/* Similar chips */}
-            <div className="mt-3 flex items-center gap-3 text-slate-600 text-[14px]">
-              <span className="text-slate-500">Similar:</span>
-              {['Frontend','Backend','Graphic Designer'].map((chip) => (
-                <button key={chip} className="cursor-pointer rounded-md px-4 py-1.5 ring-1 ring-slate-300 text-slate-700 hover:bg-slate-50">
-                  {chip}
-                </button>
-              ))}
+            <div className="mt-3 flex flex-wrap items-center gap-2 tablet:gap-3 text-slate-600 text-[14px]">
+              <span className="text-slate-500 mr-2">Similar:</span>
+              <div className="flex flex-wrap items-center gap-2 tablet:gap-3">
+                {['Frontend','Backend','Graphic Designer'].map((chip) => (
+                  <button
+                    key={chip}
+                    className="cursor-pointer whitespace-nowrap rounded-md px-4 py-1.5 ring-1 ring-slate-300 text-slate-700 hover:bg-slate-50"
+                  >
+                    {chip}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <JobsSection sectionKey="featured" title="Featured Jobs" onApply={() => setShow(true)} savedIds={new Set()} toggleSave={toggleSave} items={4} />
