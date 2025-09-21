@@ -1,6 +1,18 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
+export const SearchIcon = ({ className }: { className?: string }) => {
+  const [imgOk, setImgOk] = React.useState(true)
+  return imgOk ? (
+    <img src="/search.png" alt="Search" onError={() => setImgOk(false)} className={[className || '', 'select-none'].join(' ')} />
+  ) : (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={[className || ''].join(' ')} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  )
+}
+
 type NavItem = {
   label: string
   to: string
@@ -23,42 +35,6 @@ const linkBase =
 const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false)
   const navigate = useNavigate()
-
-  const SearchIcon = ({ className }: { className?: string }) => {
-    const [imgOk, setImgOk] = React.useState(true)
-    return imgOk ? (
-      <img
-        src="/search.png"
-        alt="Search"
-        onError={() => setImgOk(false)}
-        className={[
-          'pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 select-none',
-          'h-4 w-4 opacity-70',
-          className || '',
-        ].join(' ')}
-      />
-    ) : (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        className={[
-          'pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400',
-          'h-4 w-4',
-          className || '',
-        ].join(' ')}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-      </svg>
-    )
-  }
-
-  
 
   const MenuIcon = ({ className }: { className?: string }) => (
     <svg
@@ -140,7 +116,7 @@ const Navbar: React.FC = () => {
           {/* Right: Search, CTA, Avatar (tablet and up) */}
           <div className="hidden tablet:flex items-center gap-2 laptop-sm:gap-3 min-w-0">
             <div className="relative min-w-0 hidden laptop-sm:block">
-              <SearchIcon />
+              <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 opacity-70" />
               <input
                 type="search"
                 placeholder="Search"
@@ -186,7 +162,7 @@ const Navbar: React.FC = () => {
           <div className="tablet:hidden animate-slide-down origin-top rounded-2xl border border-slate-200 bg-white p-3 shadow-xl">
             <div className="mb-3 flex items-center gap-2">
               <div className="relative flex-1">
-                <SearchIcon />
+                <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 opacity-70" />
                 <input
                   type="search"
                   placeholder="Search"

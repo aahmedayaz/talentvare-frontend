@@ -41,4 +41,38 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@utility animate-pop {
+  animation: pop .28s ease-out both;
+}
+@keyframes pop {
+  0% { opacity: 0; transform: scale(.9); }
+  60% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@utility animate-pop-out {
+  animation: pop-out .25s ease-in both;
+}
+@keyframes pop-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(.92); }
+}
+
+@utility animate-check-in {
+  animation: check-in .5s ease-out both;
+}
+@keyframes check-in {
+  0% { transform: scale(.8); opacity: .5; }
+  70% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* For drawing the check path */
+@utility animate-stroke {
+  animation: draw-stroke 700ms ease-out forwards;
+}
+@keyframes draw-stroke {
+  to { stroke-dashoffset: 0; }
+}
+
 
